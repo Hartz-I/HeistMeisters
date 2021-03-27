@@ -3,5 +3,7 @@
 [ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=1]
 
 [node name="Torch" type="Light2D"]
-position = Vector2( 330, 0 )
+position = Vector2( 332.002, -2.00226 )
 texture = ExtResource( 1 )
+shadow_enabled = true
+shadow_color = Color( 0.0588235, 0.0588235, 0.0588235, 0 )

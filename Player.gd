@@ -1,6 +1,7 @@
 extends "res://Character/TemplateCharacter.gd"
 
 var motion = Vector2() #uses in move and slide
+#var TORCH = true no need
 
 func _physics_process(delta):
 	manage_movement()
@@ -31,3 +32,8 @@ func manage_movement():
 		motion.x = clamp(motion.x + SPEED , 0 , MAX_SPEED)
 	else:
 		motion.x=lerp(motion.x, 0, FRICTION)
+		
+	if Input.is_action_just_pressed("toggle_torch"):
+#		TORCH = not TORCH
+#		$Torch.enabled = TORCH
+		$Torch.enabled = !$Torch.enabled #fancy way. make whatever it is not
