@@ -3,10 +3,7 @@
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Character/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Character/TemplateCharacter.tscn" type="PackedScene" id=3]
-
-[sub_resource type="OccluderPolygon2D" id=1]
-cull_mode = 1
-polygon = PoolVector2Array( -9.0459, 16.3102, -11.8728, 8.41959, -14.878, 0.994965, -12.4031, -8.19742, -10.8121, -16.8595, -6.3927, -21.6324, 2.44611, -21.2789, 6.15845, -17.213, 8.81006, -7.66708, 12.5224, -0.949585, 8.45654, 8.41959, 6.15845, 15.6674, 2.26935, 20.6172, -6.3927, 20.9707 )
+[ext_resource path="res://Character/NPC/Camera.tscn" type="PackedScene" id=4]
 
 [node name="TemplateLevel" type="Node2D"]
 
@@ -22,7 +19,8 @@ position = Vector2( 267.103, 196.548 )
 color = Color( 0.45098, 0.4, 0.4, 1 )
 
 [node name="TemplateCharacter" parent="." instance=ExtResource( 3 )]
-position = Vector2( 550.586, 196.548 )
+position = Vector2( 673.391, 336.706 )
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="TemplateCharacter"]
-occluder = SubResource( 1 )
+[node name="Camera" parent="." instance=ExtResource( 4 )]
+position = Vector2( 705.465, 135.829 )
+rotation = 1.5708
